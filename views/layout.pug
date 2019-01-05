@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet' href='https://bootswatch.com/4/flatly/bootstrap.min.css')
+  body
+    header
+      // Fixed navbar
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href='http://programmerblog.net') Programmer Blog
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/')
+                | Home
+    .container
+      block content
